@@ -1,0 +1,24 @@
+<title>{{ group.name }}</title>
+{% include 'components/header.html' %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="well">
+                <h3>{{ group.name }}</h3>
+                <p>Members:</p>
+                {% include 'components/list/list_users.html' %}
+                <p>Expenses:</p>
+                {% include 'components/list/list_expenses.html' %}
+            </div>
+        </div>
+        <div class="col-md-3">
+            {% if users %}
+                {% include 'components/forms/expense_form.html' %}
+            {% endif %}
+            {% if add_user_form.user_phone.choices|length > 0 %}
+                {% include 'components/forms/add_user_form.html' %}
+            {% endif %}
+        </div>
+    </div>
+{% include 'components/footer.html' %}
+</div>

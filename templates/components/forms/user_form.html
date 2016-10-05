@@ -1,0 +1,10 @@
+<div class="well">
+    <h3>Add user</h3>
+    {% from "_formhelpers.html" import render_field %}
+    <form action="{{ url_for('create_user') }}" method="POST">
+        {{ render_field(form.name) }}<br>
+        {{ render_field(form.phone) }}<br>
+        {{ form.submit() }}
+        {{ form.csrf_token }}
+    </form>
+</div>

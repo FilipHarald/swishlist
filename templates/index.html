@@ -1,0 +1,23 @@
+<title>Welcome!</title>
+<div class="container">
+{% include 'components/header.html' %}
+<div class="row">
+    <div class="col-md-9">
+        <div class="well">
+            <p>Welcome to Swishlist!
+                <br>Here you can manage your debts you have or your friends have to you. Simply create a group and send the URL to your friends and they can join.
+                <br>  Once you've joined the group you and your friends can start adding expenses to the group. How much and to who is then displayed in the group.</p>
+        </div>
+        {% if groups %}
+        <div class="well">
+            <h3>Registered groups</h3>
+                {% include 'components/list/list_groups.html' %}
+        </div>
+        {% endif %}
+    </div>
+    <div class="col-md-3">
+        {% include 'components/forms/user_form.html' %}
+    </div>
+</div>
+</div>
+{% include 'components/footer.html' %}

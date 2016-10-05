@@ -1,0 +1,27 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>Amount</th>
+        <th>Text</th>
+        <th>Created</th>
+        <th>Payer</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for expense in expense_data.expenses %}
+                <tr>
+                    <td class="amount">{{ expense.amount }}</td>
+                    <td><a href="{{ url_for('show_expense', created=expense.created) }}">{{ expense.text }}</a></td>
+                    <td>{{ expense.date }}</td>
+                    <td><a href="{{ url_for('show_user', phone=expense.payer.phone) }}">{{ expense.payer.phone }}</a></td>
+                </tr>
+        {% endfor %}
+    </tbody>
+    {% if expense_data.tot_amount %}
+    <tfoot>
+        <tr>
+            <td class="total-amount">{{ expense_data.tot_amount }}</td>
+        </tr>
+    </tfoot>
+    {% endif %}
+</table>

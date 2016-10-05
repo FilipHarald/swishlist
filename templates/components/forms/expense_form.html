@@ -1,0 +1,12 @@
+<div class="well">
+    <h3>Add expense</h3>
+    {% from "_formhelpers.html" import render_field %}
+    <form action="{{ url_for('create_expense') }}" method="POST">
+        {{ expense_form.payer.label }}{{ render_field(expense_form.payer) }}<br>
+        {{ render_field(expense_form.amount) }}<br>
+        {{ render_field(expense_form.text) }}<br>
+        {{ render_field(expense_form.created, type='datetime-local') }}<br>
+        {{ expense_form.submit() }}
+        {{ expense_form.csrf_token }}
+    </form>
+</div>

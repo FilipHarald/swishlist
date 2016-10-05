@@ -1,0 +1,61 @@
+html * {
+    font-family: "Courier New", Courier, monospace;
+    color: #2eff00;
+}
+body {
+    background: url('black_books_small.jpeg');
+}
+h1 {
+    font-size: 500%;
+    font-weight: bold;
+}
+h3 {
+    font-weight: bold;
+}
+p {
+    font-size: 130%;
+}
+input {
+    color: black;
+
+}
+a {
+    text-decoration: underline;
+}
+footer p {
+    background-color: rgba(20, 44, 21, 0.86);
+}
+textarea {
+    color: black;
+}
+.nav-pills a{
+    background-color: #003209;
+}
+.total-amount {
+    background-color: #156d00;
+}
+.navbar {
+    background-color: black;
+}
+.btn-lg {
+    float: right;
+}
+.well{
+    background-color: rgb(51, 62, 50);
+}
+.list-group-item{
+    color: black;
+    font-weight: bold;
+}
+.badge {
+    background-color: #156d00;
+}
+.debt-span {
+    float: right;
+    color: blue;
+}
+#edit-btn, #delete-btn {
+    float: right;
+    background-color: black;
+}
+

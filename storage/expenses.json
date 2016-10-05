@@ -1,0 +1,67 @@
+[
+    {
+        "amount": 2000,
+        "created": 1473366941,
+        "group": {
+            "id": 2,
+            "link": "127.0.0.1:5000/api/groups/2"
+        },
+        "payer": {
+            "link": "127.0.0.1:5000/api/users/0505-448877",
+            "phone": "0505-448877"
+        },
+        "text": "Lobster"
+    },
+    {
+        "amount": 1000,
+        "created": 1473367000,
+        "group": {
+            "id": 2,
+            "link": "127.0.0.1:5000/api/groups/2"
+        },
+        "payer": {
+            "link": "127.0.0.1:5000/api/users/0707-336655",
+            "phone": "0707-336655"
+        },
+        "text": "Wine and cheese"
+    },
+    {
+        "amount": 606,
+        "created": 1471250100,
+        "group": {
+            "id": 1,
+            "link": "127.0.0.1:5000/api/groups/1"
+        },
+        "payer": {
+            "link": "http://127.0.0.1:5000/api/users/0505-448877/",
+            "phone": "0505-448877"
+        },
+        "text": "Champagne"
+    },
+    {
+        "amount": 1000,
+        "created": 1470308940,
+        "group": {
+            "id": 1,
+            "link": "127.0.0.1:5000/api/groups/1"
+        },
+        "payer": {
+            "link": "http://127.0.0.1:5000/api/users/0505-448877/",
+            "phone": "0505-448877"
+        },
+        "text": "The accomodation in Berlin"
+    },
+    {
+        "amount": 333,
+        "created": 1477041060,
+        "group": {
+            "id": 1,
+            "link": "http://127.0.0.1:5000/api/groups/1/"
+        },
+        "payer": {
+            "link": "http://127.0.0.1:5000/api/users/0707-336655/",
+            "phone": "0707-336655"
+        },
+        "text": "Three Beers"
+    }
+]

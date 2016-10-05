@@ -1,0 +1,13 @@
+<title>{{ user.name }}</title>
+{% include 'components/header.html' %}
+<div class="container">
+    <div class="well">
+        <h3>{{ user.name }}</h3>
+        Phone: {{ user.phone }}
+        <br>
+        Groups:
+        </p>
+        {% include 'components/list/list_groups.html' %}
+    </div>
+</div>
+{% include 'components/footer.html' %}

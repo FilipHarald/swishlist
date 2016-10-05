@@ -1,0 +1,12 @@
+<ul class="list-group">
+    {% for user in users %}
+    <a href="/users/{{ user.phone }}">
+        <li class="list-group-item">
+            {{ user.name }} ({{ user.phone }})
+            {% if user.debt %}
+                <span class="debt-span">{{ user.debt }}</span>
+            {% endif %}
+        </li>
+    </a>
+    {% endfor %}
+</ul>

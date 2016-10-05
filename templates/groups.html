@@ -1,0 +1,13 @@
+{% include 'components/header.html' %}
+<title>Groups</title>
+<div class="container">
+    <div class="col-md-9">
+        <div class="well">
+            <h3>All groups</h3>
+                {% include 'components/list/list_groups.html' %}
+        </div>
+    </div>
+    <div class="col-md-3">
+        {% include 'components/forms/group_form.html' %}
+    </div>
+</div>

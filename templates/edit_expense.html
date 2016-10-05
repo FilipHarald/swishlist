@@ -1,0 +1,17 @@
+<title>Edit {{ expense.text }}</title>
+{% include 'components/header.html' %}
+<div class="container">
+    <div class="well">
+        <h3>Edit expense</h3>
+        {% from "_formhelpers.html" import render_field %}
+        <form action="{{ url_for('edit_expense', created=expense.created) }}" method="POST">
+            Text:   {{ render_field(expense_form.text) }}<br>
+            Amount: {{ render_field(expense_form.amount) }}<br>
+            Payer:  {{ render_field(expense_form.payer) }}<br>
+            Date:   {{ render_field(expense_form.created, type='datetime-local') }}<br>
+            {{ expense_form.submit() }}
+            {{ expense_form.csrf_token }}
+        </form>
+    </div>
+</div>
+{% include 'components/footer.html' %}

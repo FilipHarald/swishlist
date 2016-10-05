@@ -1,0 +1,10 @@
+<ul class="list-group">
+    {% for group in groups %}
+    <a href="{{ url_for('show_group', group_id=group.id) }}">
+        <li class="list-group-item">
+            <span class="badge">{{ group.users|length }}</span>
+            {{ group.name }}
+        </li>
+    </a>
+    {% endfor %}
+</ul>
