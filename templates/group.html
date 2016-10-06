@@ -6,7 +6,9 @@
             <div class="well">
                 <h3>{{ group.name }}</h3>
                 <p>Members:</p>
-                {% include 'components/list/list_users.html' %}
+                {% if users %}
+                    {% include 'components/list/list_users.html' %}
+                {% endif %}
                 <p>Expenses:</p>
                 {% include 'components/list/list_expenses.html' %}
             </div>

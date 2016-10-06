@@ -1,5 +1,5 @@
 {
-    "current_id": 6,
+    "current_id": 7,
     "groups": [
         {
             "id": 1,
@@ -32,6 +32,11 @@
                     "phone": "0707-336655"
                 }
             ]
+        },
+        {
+            "id": 7,
+            "name": "aaa",
+            "users": []
         }
     ]
 }

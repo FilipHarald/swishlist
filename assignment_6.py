@@ -4,9 +4,8 @@ from collections import defaultdict
 
 from flask import Flask, jsonify, json, redirect, render_template, request, session, url_for
 from flask_wtf import Form
-from wtforms import StringField, SubmitField, TextAreaField, IntegerField, SelectField, DateTimeField
+from wtforms import StringField, SubmitField, IntegerField, SelectField, DateTimeField
 from wtforms.validators import DataRequired, ValidationError, Regexp, Length
-# from wtforms.fields.html5 import DateTimeField
 
 app = Flask(__name__)
 app.secret_key = 's3cr3t'
@@ -204,7 +203,7 @@ def show_group(group_id, expense_form=None):
     users = calculate_debt_data(get_group_users(group_id), expense_data)
     add_user_form = AddUserForm()
     add_user_form.user_phone.choices = [(user['phone'], user['name']) for user in get_not_group_users(group_id)]
-    if not expense_form:
+    if not expense_form and users:
         expense_form = ExpenseForm()
         expense_form.payer.choices = [(user['phone'], user['name']) for user in users]
     return render_template('group.html',
@@ -232,6 +231,8 @@ def format_expenses(expenses):
 
 
 def calculate_debt_data(users, expense_data):
+    if not users:
+        return None
     avg_expense = int(expense_data['tot_amount'] / len(users))
     users_expenses = defaultdict(lambda: 0)
     for expense in expense_data['expenses']:
@@ -420,6 +421,5 @@ def get_group_expenses(group_id):
     all_expenses = get_resources(storage_path_expenses)
     group_expenses = [expense for expense in all_expenses if expense['group']['id'] == group_id]
     return group_expenses
-
 
 app.run()
